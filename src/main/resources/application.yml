@@ -1,0 +1,24 @@
+debug: false
+server:
+  port: 9001
+  servlet:
+    contextPath: /api
+spring:
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL9Dialect
+      useNewIdGeneratorMappings: false
+      temp:
+        use_jdbc_metadata_defaults: false
+      show_sql: false
+      use_sql_comments: false
+      format_sql: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lingua_de_ouro
+    driverClassName: org.postgresql.Driver
+    plataform: POSTGRESQL
+    username: postgres
+    password: postgres
+app:
+  jwtSecret: 78284d536d6562385f2468734379466e29453c5c636e6170255d3a7c2b
+  jwtExpirationInMs: 604800000

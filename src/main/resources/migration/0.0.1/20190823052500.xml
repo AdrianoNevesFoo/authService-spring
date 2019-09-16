@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="Bijay" id="20190823052500">
+        <comment>Adicionando roles</comment>
+
+        <insert tableName="roles">
+            <column name="name" value="ROLE_USER"/>
+            <column name="enabled" value="true"/>
+
+            <column name="created_at" value="now()"/>
+            <column name="deleted" value="false"/>
+            <column name="created_by" value="bijay"/>
+            <column name="modified_at" value="now()"/>
+            <column name="last_modified_by" value="bijay"/>
+            <column name="version" value="0"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="name" value="ROLE_ADMIN"/>
+            <column name="enabled" value="true"/>
+
+            <column name="created_at" value="now()"/>
+            <column name="deleted" value="false"/>
+            <column name="created_by" value="bijay"/>
+            <column name="modified_at" value="now()"/>
+            <column name="last_modified_by" value="bijay"/>
+            <column name="version" value="0"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
